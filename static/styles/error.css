@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    overflow: hidden;
+    height: 100vh;
+}
+
+div.header{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 3vw;
+    user-select: none;
+    z-index: 100;
+}
+
+h2{
+    font-size: 2.7vw;
+}
+
+i{
+    font-family: matrix;
+    user-select: none;
+    position: absolute;
+    height: -200px;
+    color: rgb(43, 255, 0);
+    text-shadow: 0px -17px 0px rgba(43, 255, 0, 0.9),
+                    0px -34px 0px rgba(43,255,0,0.8),
+                    0px -51px 0px rgba(43,255,0,0.7),
+                    0px -68px 0px rgba(43,255,0,0.6),
+                    0px -85px 0px rgba(43,255,0,0.5),
+                    0px -102px 0px rgba(43,255,0,0.4),
+                    0px -119px 0px rgba(43,255,0,0.3),
+                    0px -136px 0px rgba(43,255,0,0.2),
+                    0px -153px 0px rgba(43,255,0,0.1);
+    animation: animate 5s linear infinite;
+
+}
+
+@keyframes animate 
+{
+    0%
+    {
+        transform: translateY(-200px)
+    }
+    100%
+    {
+        transform: translateY(calc(100vh + 200px))
+    }
+}
