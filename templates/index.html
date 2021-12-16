@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}test{% endblock %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="topnav">
+    <a class="active" href="/">Home</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <div class="dropdown">
+        <button onclick="dropdownHandle()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+            <form method="post">
+                <label for="username">Username</label>
+                <input name="username" id="username" required>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+                <input type="submit" value="Log in">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
