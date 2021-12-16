@@ -3,7 +3,7 @@ services:
   web:
     build: .
     ports:
-      - "8080:5000" #[outgoing Port]:[incoming Port]
+      - "5000:5000" #[outgoing Port]:[incoming Port]
     volumes:
       - .:/code
     environment:
