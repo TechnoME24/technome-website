@@ -1,0 +1,102 @@
+:root {
+    --Black: #000000;
+    --Charleston-Green: #222729;
+    --Gunmetal: #2D3437;
+    --Outer-Space-Crayola: #31393C;
+    --Dim-Gray: #656B6D;
+    --Gray-Web: #7F8486;
+    --Spannish-Gray: #7F8486;
+    --Light-Gray: #CCCECF;
+    --White: #FFFFFF;
+}
+
+body {
+    background-color: var(--Dim-Gray);
+}
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: var(--Outer-Space-Crayola);
+    font-family: Arial;
+    margin: -10px -10px 0px;
+}
+  
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: var(--Black);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+}
+  
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: var(--Black);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+  
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: var(--Gunmetal);
+}
+  
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--Gunmetal);
+    min-width: 160px;
+    box-shadow: 0px 16px 16px 0px var(--Charleston-Green);
+    z-index: 1;
+    padding: 12px 16px;
+} 
+
+div.login-menu-input {
+    margin: 5px 0px 5px;
+}
+
+label.login-menu-input {
+    color: var(--navbar-dropdown-input-text);
+}
+
+input.login-menu-input {
+    margin-top: 5px;
+    display: block;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--navbar-dropdown-input-text);
+    background-color: var(--navbar-dropdown-input-bg);
+    background-clip: padding-box;
+    border: 1px solid var(--navbar-dropdown-input-border);
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.dropdown-submit {
+    background-color: var(--navbar-dropdwom-submit-bg);
+    color: var(--navbar-dropdwom-submit-text);
+    border-radius: .25rem;
+    border-color: transparent;
+}
+  
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
