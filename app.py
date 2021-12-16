@@ -1,9 +1,7 @@
 from flask import Flask, redirect, url_for, render_template, request, flash, session
 from flask.helpers import send_from_directory
-import redis
 
 app = Flask(__name__)
-cache = redis.Redis(host='redis', port=6379)
 
 
 #####################
@@ -22,6 +20,13 @@ def page_forbidden(e):
     return render_template('error.html', h1="ERROR 403", h2="Page forbidden"), 403
 
 
+@app.route('/', methods=["POST","GET"])
+def index():
+    return render_template('index.html')
+
 @app.route('/assets/<path:path>')
 def send_assets(path):
     return send_from_directory('assets', path)
+
+if __name__ == "__main__":
+	app.run(debug=True)
